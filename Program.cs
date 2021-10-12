@@ -16,7 +16,7 @@ namespace NumberGuessFlowchartTemplate
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new yesButton());
+            Application.Run(new form1());
         }
     }
 }

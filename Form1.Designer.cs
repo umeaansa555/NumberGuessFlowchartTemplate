@@ -1,7 +1,7 @@
 ﻿
 namespace NumberGuessFlowchartTemplate
 {
-    partial class yesButton
+    partial class form1
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace NumberGuessFlowchartTemplate
             this.nameLabel = new System.Windows.Forms.Label();
             this.nameInput = new System.Windows.Forms.TextBox();
             this.outputLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.yesButton = new System.Windows.Forms.Button();
             this.noButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -62,14 +62,15 @@ namespace NumberGuessFlowchartTemplate
             this.outputLabel.TabIndex = 2;
             this.outputLabel.Text = "What is your name?";
             // 
-            // button1
+            // yesButton
             // 
-            this.button1.Location = new System.Drawing.Point(136, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 28);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Yes";
-            this.button1.UseVisualStyleBackColor = true;
+            this.yesButton.Location = new System.Drawing.Point(136, 176);
+            this.yesButton.Name = "yesButton";
+            this.yesButton.Size = new System.Drawing.Size(108, 28);
+            this.yesButton.TabIndex = 3;
+            this.yesButton.Text = "Yes";
+            this.yesButton.UseVisualStyleBackColor = true;
+            this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
             // 
             // noButton
             // 
@@ -79,18 +80,19 @@ namespace NumberGuessFlowchartTemplate
             this.noButton.TabIndex = 4;
             this.noButton.Text = "No";
             this.noButton.UseVisualStyleBackColor = true;
+            this.noButton.Click += new System.EventHandler(this.noButton_Click);
             // 
-            // yesButton
+            // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.noButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.yesButton);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.nameInput);
             this.Controls.Add(this.nameLabel);
-            this.Name = "yesButton";
+            this.Name = "form1";
             this.Text = "Number Guess";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,7 +104,7 @@ namespace NumberGuessFlowchartTemplate
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox nameInput;
         private System.Windows.Forms.Label outputLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button yesButton;
         private System.Windows.Forms.Button noButton;
     }
 }

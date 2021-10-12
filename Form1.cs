@@ -11,23 +11,42 @@ using System.Threading;
 
 namespace NumberGuessFlowchartTemplate
 {
-    public partial class yesButton : Form
+    public partial class form1 : Form
     {
-        string name;
+        string userName;
+        Random randGen = new Random();
+        int randomNumber;
 
-        public yesButton()
+        public form1()
         {
             InitializeComponent();
         }
 
         private void nameInput_TextChanged(object sender, EventArgs e)
         {
-            nameInput.Text = name;
-            outputLabel.Text = $"Welcome, {name}!";
-            Thread.Sleep;(1000)
+            nameInput.Text = userName;
+            outputLabel.Text = $"Welcome, {userName}!";
+            Thread.Sleep(1000);
             Refresh();
-            outputLabel.Text = "Do you want to play a "number guessing game"?";
+            outputLabel.Text = "Do you want to play a number guessing game?";
 
+            yesButton.Visible = true;
+            yesButton.Enabled = true;
+
+            noButton.Visible = true;
+            noButton.Enabled = true;
+
+        }
+
+        private void yesButton_Click(object sender, EventArgs e)
+        {
+            randomNumber = randGen.Next(1,101);
+            outputLabel.Text = $"{randomNumber}";
+        }
+
+        private void noButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
