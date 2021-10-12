@@ -16,6 +16,7 @@ namespace NumberGuessFlowchartTemplate
         string userName;
         Random randGen = new Random();
         int randomNumber;
+        int guess;
 
         public form1()
         {
@@ -47,6 +48,23 @@ namespace NumberGuessFlowchartTemplate
         private void noButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guessBox_TextChanged(object sender, EventArgs e)
+        {
+            guess = Convert.ToInt32(guessBox.Text);
+            outputLabel.Text = $"{randomNumber}";
+            try 
+            {
+                guess = randomNumber;
+                outputLabel.Text = $"Congratulations, you guessed right! Press exit to close the program.";
+                exitButton.Visible = true;
+            }
+            catch
+            {
+                outputLabel.Text = $"That's not it. Try again";
+
+            }
         }
     }
 }

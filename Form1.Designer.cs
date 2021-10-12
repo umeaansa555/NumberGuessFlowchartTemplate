@@ -34,12 +34,15 @@ namespace NumberGuessFlowchartTemplate
             this.outputLabel = new System.Windows.Forms.Label();
             this.yesButton = new System.Windows.Forms.Button();
             this.noButton = new System.Windows.Forms.Button();
+            this.guessLabel = new System.Windows.Forms.Label();
+            this.guessBox = new System.Windows.Forms.TextBox();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(114, 62);
+            this.nameLabel.Location = new System.Drawing.Point(65, 49);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(63, 13);
             this.nameLabel.TabIndex = 0;
@@ -47,7 +50,7 @@ namespace NumberGuessFlowchartTemplate
             // 
             // nameInput
             // 
-            this.nameInput.Location = new System.Drawing.Point(183, 59);
+            this.nameInput.Location = new System.Drawing.Point(134, 46);
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(178, 20);
             this.nameInput.TabIndex = 1;
@@ -56,37 +59,72 @@ namespace NumberGuessFlowchartTemplate
             // outputLabel
             // 
             this.outputLabel.AutoSize = true;
-            this.outputLabel.Location = new System.Drawing.Point(114, 107);
+            this.outputLabel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Location = new System.Drawing.Point(90, 98);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(101, 13);
+            this.outputLabel.Size = new System.Drawing.Size(203, 29);
             this.outputLabel.TabIndex = 2;
             this.outputLabel.Text = "What is your name?";
             // 
             // yesButton
             // 
-            this.yesButton.Location = new System.Drawing.Point(136, 176);
+            this.yesButton.Location = new System.Drawing.Point(68, 161);
             this.yesButton.Name = "yesButton";
-            this.yesButton.Size = new System.Drawing.Size(108, 28);
+            this.yesButton.Size = new System.Drawing.Size(111, 28);
             this.yesButton.TabIndex = 3;
             this.yesButton.Text = "Yes";
             this.yesButton.UseVisualStyleBackColor = true;
+            this.yesButton.Visible = false;
             this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
             // 
             // noButton
             // 
-            this.noButton.Location = new System.Drawing.Point(268, 176);
+            this.noButton.Location = new System.Drawing.Point(185, 161);
             this.noButton.Name = "noButton";
-            this.noButton.Size = new System.Drawing.Size(108, 28);
+            this.noButton.Size = new System.Drawing.Size(127, 28);
             this.noButton.TabIndex = 4;
             this.noButton.Text = "No";
             this.noButton.UseVisualStyleBackColor = true;
+            this.noButton.Visible = false;
             this.noButton.Click += new System.EventHandler(this.noButton_Click);
+            // 
+            // guessLabel
+            // 
+            this.guessLabel.AutoSize = true;
+            this.guessLabel.Location = new System.Drawing.Point(68, 227);
+            this.guessLabel.Name = "guessLabel";
+            this.guessLabel.Size = new System.Drawing.Size(60, 13);
+            this.guessLabel.TabIndex = 5;
+            this.guessLabel.Text = "Your guess";
+            this.guessLabel.Visible = false;
+            // 
+            // guessBox
+            // 
+            this.guessBox.Location = new System.Drawing.Point(134, 224);
+            this.guessBox.Name = "guessBox";
+            this.guessBox.Size = new System.Drawing.Size(178, 20);
+            this.guessBox.TabIndex = 6;
+            this.guessBox.Visible = false;
+            this.guessBox.TextChanged += new System.EventHandler(this.guessBox_TextChanged);
+            // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(68, 272);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(244, 26);
+            this.exitButton.TabIndex = 7;
+            this.exitButton.Text = "Close";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Visible = false;
             // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(395, 348);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.guessBox);
+            this.Controls.Add(this.guessLabel);
             this.Controls.Add(this.noButton);
             this.Controls.Add(this.yesButton);
             this.Controls.Add(this.outputLabel);
@@ -106,6 +144,9 @@ namespace NumberGuessFlowchartTemplate
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Button yesButton;
         private System.Windows.Forms.Button noButton;
+        private System.Windows.Forms.Label guessLabel;
+        private System.Windows.Forms.TextBox guessBox;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 
