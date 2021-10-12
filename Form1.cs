@@ -43,6 +43,12 @@ namespace NumberGuessFlowchartTemplate
         {
             randomNumber = randGen.Next(1,101);
             outputLabel.Text = $"{randomNumber}";
+
+            yesButton.Visible = false;
+            yesButton.Enabled = false;
+
+            noButton.Visible = false;
+            noButton.Enabled = false;
         }
 
         private void noButton_Click(object sender, EventArgs e)

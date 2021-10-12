@@ -58,11 +58,10 @@ namespace NumberGuessFlowchartTemplate
             // 
             // outputLabel
             // 
-            this.outputLabel.AutoSize = true;
             this.outputLabel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputLabel.Location = new System.Drawing.Point(90, 98);
+            this.outputLabel.Location = new System.Drawing.Point(66, 81);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(203, 29);
+            this.outputLabel.Size = new System.Drawing.Size(246, 66);
             this.outputLabel.TabIndex = 2;
             this.outputLabel.Text = "What is your name?";
             // 
@@ -93,9 +92,9 @@ namespace NumberGuessFlowchartTemplate
             this.guessLabel.AutoSize = true;
             this.guessLabel.Location = new System.Drawing.Point(68, 227);
             this.guessLabel.Name = "guessLabel";
-            this.guessLabel.Size = new System.Drawing.Size(60, 13);
+            this.guessLabel.Size = new System.Drawing.Size(63, 13);
             this.guessLabel.TabIndex = 5;
-            this.guessLabel.Text = "Your guess";
+            this.guessLabel.Text = "Your guess:";
             this.guessLabel.Visible = false;
             // 
             // guessBox
